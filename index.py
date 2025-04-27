@@ -16,6 +16,7 @@ external_stylesheets = [
 
 # Initialize app
 app = Dash(__name__, external_stylesheets=external_stylesheets, suppress_callback_exceptions=True)
+server = app.server
 
 # Define layout
 app.layout = html.Div([
