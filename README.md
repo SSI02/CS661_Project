@@ -1,6 +1,5 @@
 # 🌍 Climate Change Dashboard
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)  
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)  
 [![Dash](https://img.shields.io/badge/dash-2.x-orange.svg)](https://dash.plotly.com/)  
 
@@ -106,11 +105,6 @@ https://climate-dashboard-ybix.onrender.com/
 Please follow the existing code style, add tests if applicable, and keep assets under 100 MB per file.
 
 ---
-
-## 📜 License
-
-This project is licensed under the [MIT License](LICENSE).
-
 
 Project Link: https://github.com/SSI02/CS661_Project  
 
