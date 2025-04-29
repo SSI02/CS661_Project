@@ -193,56 +193,56 @@ layout = dbc.Container([
         ),
         
         # Seasonal Analysis
-        dbc.Col(
-            dbc.Card(
-                dbc.CardBody([
-                    html.H4("Seasonal Patterns", className="card-title"),
-                    html.P("Analyze how sea levels vary throughout the year."),
-                    dbc.Spinner(
-                        dcc.Graph(
-                            id="sea-level-seasonal",
-                            figure=px.bar(
-                                seasonal_df,
-                                x="month_name",
-                                y="Sea Level (mm)_mean",
-                                error_y="Sea Level (mm)_std",
-                                title="Monthly Sea Level Variations",
-                                labels={"Sea Level (mm)_mean": "Average Sea Level (mm)", "month_name": "Month"},
-                                template="plotly_white",
-                                color="Sea Level (mm)_mean",
-                                color_continuous_scale="Blues"
-                            ).update_layout(
-                                xaxis=dict(
-                                    categoryorder="array",
-                                    categoryarray=[month for month in ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
-                                                                    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]]
-                                ),
-                                yaxis=dict(title="Average Sea Level (mm)"),
-                                coloraxis_showscale=False
-                            ),
-                            config={"responsive": True}
-                        ),
-                        color="info"
-                    ),
-                    dbc.Alert([
-                        html.H5("Seasonal Insights"),
-                        html.P([
-                            "Sea levels typically peak in ",
-                            html.Strong(f"{seasonal_df.loc[seasonal_df['Sea Level (mm)_mean'].idxmax(), 'month_name']}"),
-                            " and are lowest in ",
-                            html.Strong(f"{seasonal_df.loc[seasonal_df['Sea Level (mm)_mean'].idxmin(), 'month_name']}")
-                        ]),
-                        html.P(
-                            "These seasonal variations are influenced by thermal expansion, ocean currents, and weather patterns."
-                        )
-                    ], color="info", className="mt-3")
+    #     dbc.Col(
+    #         dbc.Card(
+    #             dbc.CardBody([
+    #                 html.H4("Seasonal Patterns", className="card-title"),
+    #                 html.P("Analyze how sea levels vary throughout the year."),
+    #                 dbc.Spinner(
+    #                     dcc.Graph(
+    #                         id="sea-level-seasonal",
+    #                         figure=px.bar(
+    #                             seasonal_df,
+    #                             x="month_name",
+    #                             y="Sea Level (mm)_mean",
+    #                             error_y="Sea Level (mm)_std",
+    #                             title="Monthly Sea Level Variations",
+    #                             labels={"Sea Level (mm)_mean": "Average Sea Level (mm)", "month_name": "Month"},
+    #                             template="plotly_white",
+    #                             color="Sea Level (mm)_mean",
+    #                             color_continuous_scale="Blues"
+    #                         ).update_layout(
+    #                             xaxis=dict(
+    #                                 categoryorder="array",
+    #                                 categoryarray=[month for month in ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
+    #                                                                 "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]]
+    #                             ),
+    #                             yaxis=dict(title="Average Sea Level (mm)"),
+    #                             coloraxis_showscale=False
+    #                         ),
+    #                         config={"responsive": True}
+    #                     ),
+    #                     color="info"
+    #                 ),
+    #                 dbc.Alert([
+    #                     html.H5("Seasonal Insights"),
+    #                     html.P([
+    #                         "Sea levels typically peak in ",
+    #                         html.Strong(f"{seasonal_df.loc[seasonal_df['Sea Level (mm)_mean'].idxmax(), 'month_name']}"),
+    #                         " and are lowest in ",
+    #                         html.Strong(f"{seasonal_df.loc[seasonal_df['Sea Level (mm)_mean'].idxmin(), 'month_name']}")
+    #                     ]),
+    #                     html.P(
+    #                         "These seasonal variations are influenced by thermal expansion, ocean currents, and weather patterns."
+    #                     )
+    #                 ], color="info", className="mt-3")
 
-                ]),
-                className="mb-4 shadow border-0"
-            ),
-            width=6
-        )
-    ]),
+    #             ]),
+    #             className="mb-4 shadow border-0"
+    #         ),
+    #         width=6
+    #     )
+    # ]),
     
     # Rate of Change Analysis
     dbc.Row([
