@@ -440,7 +440,7 @@ def update_graph(selected_year, selected_tab, selected_country, tab_clicked):
     elif selected_tab == "state-choropleth" and selected_country:
         try:
             # load geojson & CSV
-            with open(f"data/geojson/{selected_country}.geojson") as f:
+            with open(f"data/geojson/{selected_country}.geojson", encoding='utf-8') as f:
                 gj = json.load(f)
             df_state = pd.read_csv(f"data/by_country_temp/{selected_country}.csv")
             df_state["dt"] = pd.to_datetime(df_state["dt"])
