@@ -15,13 +15,13 @@ An interactive, data-driven dashboard built with **Plotly Dash**, visualizing ke
 ## 🚀 Features
 
 - **Modular Pages**
-  - `/temperature` – animated choropleth & bar charts
-  - `/emissions` – top-10 emitters by year
+  - `/temperature` – choropleth & bar charts
+  - `/emissions` –  emission comparison by year
   - `/sea_level` – historical trends, seasonal patterns, projections
   - `/correlation` – time series, correlation matrix, scatter, dashboard view
 
 - **Interactive Controls**
-  - Year slider with play/pause animation
+  - Year slider to adjust year
   - Tabs & dropdowns for choosing chart types and regions
   - Range sliders for filtering date spans
 
