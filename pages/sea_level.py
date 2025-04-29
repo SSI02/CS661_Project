@@ -190,7 +190,7 @@ layout = dbc.Container([
                 className="mb-4 shadow border-0"
             ),
             width=6
-        ),
+        )
         
         # Seasonal Analysis
     #     dbc.Col(
@@ -242,7 +242,7 @@ layout = dbc.Container([
     #         ),
     #         width=6
     #     )
-    # ]),
+    ]),
     
     # Rate of Change Analysis
     dbc.Row([
